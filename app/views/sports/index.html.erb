@@ -1,0 +1,8 @@
+<h1>All Sports </h1>
+
+<% @sports.each do |sport| %>
+    <%= image_tag sport.image, :class => 'thumb' if sport.image.present? %>
+    <ul>
+        <li>sport: <%= link_to sport.title, sport %></li>
+    </ul>
+<% end %>
