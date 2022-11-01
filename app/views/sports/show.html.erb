@@ -1,8 +1,22 @@
 <h1><%= @sport.title %></h1>
 
-<%= image_tag @sport.image, :class => 'feature' if @sport.image.present? %>
-    <ul>
-        <li>
-            <li> INSERT EVENTO</li>
-        </li>
-    </ul>
+<%= image_tag @sport.image, :class => 'feature'%>
+
+ <%= form_for @event do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.hidden_field :sport_id, :value => @sport.id %>
+
+    <%= f.label :appointed, 'Date of event' %>
+    <%= f.text_field :appointed, :placeholder => 'YYYY-MM-DD' %>
+ 
+    <%= f.label :description%>
+    <%= f.text_area :description%>
+
+    <%= f.label :arrival_time, 'Arrival time' %>
+    <%= f.time_field :arrival_time %>
+
+    <%= f.submit %>
+<% end %> 
+    
+  

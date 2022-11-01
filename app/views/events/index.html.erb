@@ -1,0 +1,8 @@
+<h1>All events </h1>
+
+<% @events.each do |event| %>
+    <ul>
+        <li><%= link_to event.title, event %></li>
+        <li> <%= link_to_if event.sport, @sport, event.sport %></li> 
+    </ul>
+<% end %>

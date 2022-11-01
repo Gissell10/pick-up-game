@@ -11,15 +11,21 @@
 
   <body>
     <nav>
-      <%=link_to "Home", root_path %>
-      
+
+      <%=link_to "Home" ,root_path %>
+      <%= link_to 'About us', about_path  %>
+        <% if @current_user.present? %>
+        <%= link_to 'Sports', sports_path %>
+        <%= link_to 'Events', events_path %>
         <%= link_to "Sign out", login_path, :method => 'delete' %>
-      
-      
+      <% else %>
+        
         <%= link_to 'Sign up', new_user_path %>
         <%= link_to 'Log in', login_path %>
-
+      <% end %>
     </nav>
+
+
     <%= yield %>
   </body>
 </html>

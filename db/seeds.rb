@@ -1,9 +1,9 @@
 User.destroy_all
-u1 = User.create :email => 'donal@clanduck.co', :password => 'chicken'
-u2 = User.create :email => 'mcDuck@clanduck.co', :password => 'chicken'
-u3 = User.create :email => 'huey@clanduck.co', :password => 'chicken'
-u4 = User.create :email => 'dewey@clanduck.co', :password => 'chicken'
-u5 = User.create :email => 'louie@clanduck.co', :password => 'chicken'
+u1 = User.create :email => 'donal@clanduck.co', :password => 'chicken', :name => 'Donal'
+u2 = User.create :email => 'mcDuck@clanduck.co', :password => 'chicken', :name => 'Mc Duck'
+u3 = User.create :email => 'huey@clanduck.co', :password => 'chicken', :name => 'Huey'
+u4 = User.create :email => 'dewey@clanduck.co', :password => 'chicken', :name => 'Dewey'
+u5 = User.create :email => 'louie@clanduck.co', :password => 'chicken', :name => 'Louie'
 puts "#{ User.count } users"
 
 Sport.destroy_all
