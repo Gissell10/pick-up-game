@@ -1,8 +1,22 @@
-<h1>Pick up Game</h1>
+    <div class="px-4 py-5 my-5  text-center">
+        <img class="d-block mx-auto mb-4" src="/images/sports/FallSportsIcon.png" alt="" width="72" height="57">
+        <h1 class="display-5 fw-bold">Pick up Game </h1>
+        <% if @current_user.present? %>
+            <h2>Welcome back <%= @current_user.email %></h2>
+        <% end %>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">In this spaces you can created events or join to an already created</p>
+            <div class="d-grid gap-2 mb-5 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4 gap-3"><%= link_to 'Sign up', new_user_path %></button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4"><%= link_to 'Log in', login_path %> </button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <%= image_tag "/images/sports/siluetas.jpeg", height: 700 %>
+            </div>
+        </div>
+   </div>
 
-<% if @current_user.present? %>
-    <h2>Welcome back <%= @current_user.email %></h2>
-<% end %>
+
 
 
 
