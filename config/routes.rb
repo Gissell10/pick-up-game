@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
   resources :sports, :only => [:show, :index]
   get '/sports' => 'sports#index'
+  get '/my-events' => 'events#userEvents'
 
 
   resources :events, :only => [:new, :create, :index, :show]

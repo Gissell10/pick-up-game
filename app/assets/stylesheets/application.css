@@ -17,10 +17,19 @@
   max-height: 400px;
 }
 .thumb {
-  max-height: 500px;
-  max-width: 400px;
+  height: 330px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .login-box {
   max-width: 700px;
+}
+
+.nav {
+  text-decoration: none;
+  color: black;
+}
+.nav:hover {
+  color: white;
 }
