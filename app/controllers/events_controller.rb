@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
     def index
         @events = Event.all
+       
     end
 
     def userEvents
@@ -39,6 +40,6 @@ class EventsController < ApplicationController
 
     private
     def event_params
-        params.require(:event).permit(:title, :appointed, :description, :arrival_time, :sport_id)
+        params.require(:event).permit(:title, :appointed, :description, :arrival_time, :sport_id, :lat, :lng)
     end
 end

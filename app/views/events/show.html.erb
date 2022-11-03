@@ -5,8 +5,9 @@
 
  <% if @event.sport.present? %>
        <li>sport: <%= link_to @event.sport.title, @event.sport %></li>
-       <li><%= link_to image_tag(@event.sport.image, :class => 'thumb'), 
-       @event.sport%></li> 
+       <%= link_to image_tag(@event.sport.image, :class => 'thumb'), 
+       @event.sport%>
+       <div id="map" data-lat=<%= @event.lat %> data-lng=<%= @event.lng %>></div>
  <% end %>
 
 
@@ -20,3 +21,7 @@
 
 <%= link_to 'join', join_event_path(@event) %>
 <%= link_to 'leave', leave_event_path(@event) %>
+
+
+<%= javascript_include_tag "map" %>
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCTUMfXXNvknaNbixTNuJfu77k8EG7YaSw&callback=initMap" %>

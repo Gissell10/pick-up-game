@@ -33,3 +33,7 @@
 .nav:hover {
   color: white;
 }
+
+#map {
+  height: 400px;
+}
