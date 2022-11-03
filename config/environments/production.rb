@@ -10,11 +10,6 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  config.assets.configure do |env|
-    env.js_compressor  = :uglifier # or :closure, :yui
-    env.css_compressor = :sass   # or :yui
-  end  
-
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -29,6 +24,12 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = Uglifier.new(harmony: true)
+  
+  config.assets.configure do |env|
+    env.js_compressor  = :uglifier # or :closure, :yui
+    env.css_compressor = :sass   # or :yui
+  end  
+
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
